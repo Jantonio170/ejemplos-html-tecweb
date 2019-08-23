@@ -7,10 +7,10 @@
         <h1> Register</h1>
         <form method="GET">
 
-            <label for="first-name"> First name</label>
-            <input type="text" name="first-name" id="first-name">
-            <label for="last-name"> Last name</label>
-            <input type="text" name="last-name" id="last-name">
+            <label for="first-name"> First name:*</label>
+            <input type="text" name="first-name" id="first-name" required placeholder="Your first name">
+            <label for="last-name"> Last name:</label>
+            <input type="text" name="last-name" id="last-name" placeholder="Your last name">
             
             <div>
                 <label for="male"> Male</label>
@@ -23,11 +23,56 @@
             
             <div>
                 <label for="email"> Email: </label>
-                <input type="email" name="email" id="email">
-                <label for="password"> Password:</label>
-                <input type="password" name="password" id="password">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <label for="password"> Password:*</label>
+                <input type="password" name="password" id="password" required placeholder="At least 8 character" minlength="4">
             </div>
             
+            <div>
+                <label> Birthday</label>
+                <select name="month" >
+                    <option> Month</option>
+                    <option> -----</option>
+                    <option value="1"> Jan</option>
+                    <option value="2"> Feb</option>
+                    <option value="3"> Mar</option>
+                    <option value="4"> Apr</option>
+                    <option value="5"> May</option>
+                    <option> Jun</option>
+                    <option> Jul</option>
+                    <option> Aug</option>
+                    <option> Sep</option>
+                    <option> Oct</option>
+                    <option> Nov</option>
+                    <option> Dic</option>
+                </select>
+
+                <select name="day">
+                    <option> 1</option>    
+                    <option> 2</option>    
+                    <option> 3</option>    
+                    <option> 4</option>    
+                    <option> 5</option>    
+                    <option> ...</option>    
+                </select>
+
+                <select name="year">
+                    <option> 2001</option>
+                    <option> 1999</option>
+                    <option> 1998</option>
+                    <option> 1997</option>
+                    <option> ...</option>
+
+                </select>
+            </div>
+            <label for="terms-conditions"> 
+                I agree to terms and conditions
+            </label>
+            <input id="terms-conditions" type="checkbox" required>
+            <p>
+                *Required
+            </p>
+
             <!--Boton para enviar la informacion-->
             <input type="submit" value="Submit">
         </form>
